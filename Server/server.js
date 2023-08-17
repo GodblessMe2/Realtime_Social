@@ -9,8 +9,10 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import mongoose from 'mongoose';
 import { register } from './controllers/authController.js';
+import { createPost } from './controllers/postController.js';
 import userRouter from './routers/userRouter.js';
 import authRouter from './routers/authRouter.js';
+import postRouter from './routers/postRouter.js';
 
 // Configurations\
 const __filename = fileURLToPath(import.meta.url);
@@ -38,8 +40,10 @@ const upload = multer({ storage });
 
 /* Routing */
 app.post('/api/v1/auth/register', upload.single('picturePath'), register);
+app.post('/api/v1/posts/createPost', upload.single('picturePath'), createPost);
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/user', userRouter);
+app.use('/api/v1/posts', postRouter);
 
 /* Mongoose SetUp */
 const port = process.env.PORT || 8071;
