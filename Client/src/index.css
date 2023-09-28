@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
 
 html,
 body,
@@ -6,5 +6,5 @@ body,
 .app {
   height: 100%;
   width: 100%;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
